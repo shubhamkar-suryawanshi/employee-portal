@@ -1,0 +1,62 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<div class="content">
+  <div class="row">
+    <!-- <div class="col-2">
+      <img src="../../assets/a2.png" alt="Avatar" height="100px" />
+    </div> -->
+
+    <div class="col-6">
+      <div class="info">
+        <!-- <span>
+          <h3>Shashank Patil</h3>
+        </span> -->
+
+        <ul *ngFor="let ob of obj">
+          <img src= {{ob.profile}} class="img" />        
+          <div class="details">
+            <li><h6><b>OHR ID: </b>{{ob.ohr}}</h6></li>
+            <li><h6><b>Name: </b>{{ob.name}}</h6></li>
+            <li><h6><b>Role: </b>{{ob.role}}</h6></li>
+            <li><h6><b>Rating: </b>{{ob.rating}}</h6></li> 
+          </div>         
+        </ul>
+
+        <span>
+          <button class="button"  type="submit" (click)="addComment()">Add Comment</button>
+        </span>
+      </div>
+      <!-- <div>
+        <h6>Developer</h6>
+      </div>
+      <div>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star star"></span>
+        <span class="fa fa-star star"></span>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="comments">
+    <h4>Comments:</h4>
+
+    <div class="box">
+      <p>Need to improve angular implimentation</p>
+    </div>
+
+    
+    <div class="box" *ngFor="let com of commentArray">
+      <p>{{ com }}</p>
+    </div>
+
+    <textarea
+      [(ngModel)]="comment"
+      cols="120"
+      rows="2.5"
+      placeholder="Add your comment here"
+    ></textarea>
+  </div>
+</div>

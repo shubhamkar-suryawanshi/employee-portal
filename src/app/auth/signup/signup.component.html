@@ -1,0 +1,76 @@
+<div class="content">
+  <h3>Signup</h3>
+  <hr />
+  <div class="row">
+    <div
+      class="col-2"
+      style="
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: lightgray;
+        margin-left: 5%;
+      "
+    >
+      <p style="margin-top: 35%; text-align: center">
+        <a style="margin-top: 5%" routerLink="#">Upload Avatar</a>
+      </p>
+    </div>
+    <div class="col-4">
+      <form [formGroup]="signupForm" ngSubmit="onSubmit(signupForm.value)">
+        <label for="name">Full Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          formControlName="name"
+          autofocus
+        /><br />
+
+        <label for="ohr">OHR:</label><br />
+        <input type="number" id="ohr" name="ohr" formControlGroup="ohr" /><br />
+        <label for="designation">Designation:</label><br />
+        <select name="designation" id="designation">
+          <option value="select">Select</option>
+          <option value="consultant">Consultant</option>
+          <option value="technical-associate">Technical Associate</option>
+          <option value="hr">HR</option>
+          <option value="manager">Manager</option></select
+        ><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlGroup="email"
+        /><br />
+
+        <label for="password">Password:</label><br />
+        <input
+          type="text"
+          id="password"
+          name="password"
+          formControlGroup="password"
+        /><br />
+
+        <label for="confirm-password">Confirm Password:</label><br />
+        <input
+          type="text"
+          id="confirm-password"
+          name="confirm-password"
+          formControlGroup="confirm-password"
+        /><br />
+        
+        <div class="button">
+          <button type="submit"><a routerLink="../login">Signup</a></button>
+        </div>
+      </form>
+    </div>
+
+    <h5 class="login">
+      Already have an account? Login
+      <a routerLink="../login" routerLinkActive="active">here</a>
+    </h5>
+  </div>
+</div>

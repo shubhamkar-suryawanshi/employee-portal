@@ -1,0 +1,43 @@
+.content{
+    width: 75%;
+    margin-left: 5%;
+}
+
+h3, button{
+    display: inline;
+}
+
+button{
+    margin-left: 8%;
+}
+
+a{
+    text-decoration: none;
+}
+
+h4{
+    margin-top: 5%;
+}
+
+
+.box{
+    margin: 1%;
+    border: 1px solid black;
+}
+
+p{
+    margin-left: 2%;
+}
+
+.first{
+    margin-left: 2%;
+}
+
+.star{
+    color: gold;
+}
+
+.img{
+    margin-left: 10%;
+    margin-top: 5%;
+}

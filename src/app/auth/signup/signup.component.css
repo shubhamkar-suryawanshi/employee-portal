@@ -1,0 +1,28 @@
+.content{
+    border: 1px solid black;
+    width: 30%;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+}
+
+label, input, select{
+    margin-left: 25%;
+}
+
+a{
+    text-decoration: none;
+    color:blue;
+}
+
+.button{
+    margin-top: 10%;
+    margin-left: 50%;
+}
+
+.login{
+    margin: 5% ;
+    
+}

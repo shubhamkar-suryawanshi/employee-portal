@@ -1,0 +1,33 @@
+<div class="content">
+  <h3>Login</h3><hr>
+  <form #userlogin = "ngForm" (ngSubmit)="onSubmit(userlogin.value)">
+
+    <label for="username">User Name:</label><br />
+    <input type="text" id="username" name="username" autofocus required  ngModel #usernameInput = "ngModel"  /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" ngModel /><br />
+    <div class="button"><button type="submit">Login</button></div>
+  </form>
+
+  <div class="redirect">
+    <!-- <h5>Forgot Password? Reset <a routerLink="../../profile/cp" routerLinkActive="active">here</a></h5> -->
+    <!-- Remembr how the path given to reset password
+    It is not ../../profile/change-password 
+  but it is ../../profile/cp -->
+  <h5>Don't have account? Register <a routerLink="../signup" routerLinkActive="active">here</a></h5>
+  </div>
+</div>
+
+<!-- <div class="content">
+  <h3>Login</h3><hr>
+  <form (ngSubmit)="onSubmit()">
+    <label for="username">User Name:</label><br />
+    <input type="text" id="username" name="username" [(ngModel)]="data.username" /><br />
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" [(ngModel)]="data.password" /><br />
+   <div class="button"> <button type="submit">Login</button></div>
+  </form>
+
+  <h5 class="signup">Don't have account? Register <a routerLink="/signup" routerLinkActive="active">here</a></h5>
+</div> -->

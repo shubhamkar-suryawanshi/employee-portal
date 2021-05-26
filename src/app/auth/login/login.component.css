@@ -1,0 +1,29 @@
+.content{
+    border: 1px solid black;
+    width: 27%;
+    margin: auto;
+}
+
+h3{
+    text-align: center;
+}
+
+label, input{
+    margin-left: 25%;
+}
+
+.button{
+    margin-top: 5%;
+    margin-left: 40%;
+}
+
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+.redirect h5{
+    margin: 5% ; 
+    text-align: centre;   
+}

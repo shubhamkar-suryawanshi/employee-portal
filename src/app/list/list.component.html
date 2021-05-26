@@ -1,0 +1,38 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<!-- <div class="view">
+  <button type="submit" class="btn btn-basic">Card View</button>
+  <button type="submit" class="btn btn-info">List View</button>
+</div> -->
+
+<div >
+  <div class="search">
+    <input type="text" name="search" placeholder="Search by Name" [(ngModel)]="searchName.name"  />
+  </div>
+ 
+<table id="table">
+  <thead>
+    <tr>
+      <th>Sr. No.</th>
+      <th>Emoloyee OHR</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of employees|filterBy: searchName">
+      <td>{{ e.id }}</td>
+      <td>
+        <!-- <a routerLink="../profile/userprofile">{{ e.ohr }}</a> -->
+        <a [routerLink]="['../profile/userprofile',e.ohr]">{{e.ohr}}</a>
+      </td>
+      <td>{{ e.name }}</td>
+      <td>{{ e.role }}</td>
+      <td>{{ e.rating }}</td>
+    </tr>
+  </tbody>
+</table>
